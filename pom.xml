@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.github.mohitsoni</groupId>
+	<groupId>com.cloudbees.marathon</groupId>
 	<artifactId>marathon-client</artifactId>
 	<packaging>jar</packaging>
 	<version>0.4.3-SNAPSHOT</version>
@@ -50,9 +50,9 @@
 
 	<scm>
 		<tag>master</tag>
-		<url>git@github.com:mohitsoni/marathon-client.git</url>
-		<connection>scm:git:git@github.com:mohitsoni/marathon-client.git</connection>
-		<developerConnection>scm:git:git@github.com:mohitsoni/marathon-client.git</developerConnection>
+		<url>git@github.com:cloudbees/marathon-client.git</url>
+		<connection>scm:git:git@github.com:cloudbees/marathon-client.git</connection>
+		<developerConnection>scm:git:git@github.com:cloudbees/marathon-client.git</developerConnection>
 	</scm>
 
 	<issueManagement>
