@@ -6,7 +6,6 @@ import mesosphere.marathon.client.model.v2.App;
 import mesosphere.marathon.client.model.v2.DeleteAppTaskResponse;
 import mesosphere.marathon.client.model.v2.DeleteAppTasksResponse;
 import mesosphere.marathon.client.model.v2.Deployment;
-import mesosphere.marathon.client.model.v2.GetAppRequest;
 import mesosphere.marathon.client.model.v2.GetAppResponse;
 import mesosphere.marathon.client.model.v2.GetAppTasksResponse;
 import mesosphere.marathon.client.model.v2.GetAppsResponse;
@@ -29,8 +28,8 @@ public interface Marathon {
 	@RequestLine("GET /v2/apps/{id}")
 	GetAppResponse getApp(@Param("id") String id) throws MarathonException;
 
-	@RequestLine("GET /v2/apps/{id}?{request}")
-	GetAppResponse getApp(@Param("id") String id, @Param(value = "request", expander = GetAppRequest.Expander.class) GetAppRequest request) throws MarathonException;
+	@RequestLine("GET /v2/apps/{id}?cmd={cmd}&embed={embed}")
+	GetAppResponse getApp(@Param("id") String id, @Param("cmd") String cmd, @Param("embed") List<String> embed) throws MarathonException;
 
 	@RequestLine("GET /v2/apps/{id}/tasks")
 	GetAppTasksResponse getAppTasks(@Param("id") String id);
