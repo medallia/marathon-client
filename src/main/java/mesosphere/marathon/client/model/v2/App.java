@@ -9,6 +9,23 @@ import java.util.Map;
 import mesosphere.marathon.client.utils.ModelUtils;
 
 public class App {
+	public static class Deployment {
+		private String id;
+
+		public String getId() {
+			return id;
+		}
+
+		public void setId(String id) {
+			this.id = id;
+		}
+
+		@Override
+		public String toString() {
+			return ModelUtils.toString(this);
+		}
+	}
+
 	private String id;
 	private String cmd;
 	private Integer instances;
@@ -27,6 +44,8 @@ public class App {
 	private Integer tasksHealthy;
 	private Integer tasksUnhealthy;
 	private List<HealthCheck> healthChecks;
+
+	private List<Deployment> deployments;
 
 	public String getId() {
 		return id;
@@ -187,6 +206,14 @@ public class App {
 
 	public void setHealthChecks(List<HealthCheck> healthChecks) {
 		this.healthChecks = healthChecks;
+	}
+
+	public List<Deployment> getDeployments() {
+		return deployments;
+	}
+
+	public void setDeployments(List<Deployment> deployments) {
+		this.deployments = deployments;
 	}
 
 	public Map<String, String> getLabels() {
