@@ -4,7 +4,7 @@
 	<groupId>com.cloudbees.marathon</groupId>
 	<artifactId>marathon-client</artifactId>
 	<packaging>jar</packaging>
-	<version>0.4.13</version>
+	<version>0.4.14-SNAPSHOT</version>
 	<name>marathon-client</name>
 	<description>A Java API client for Mesosphere's Marathon.</description>
 	<url>https://github.com/mohitsoni/marathon-client</url>
@@ -49,7 +49,7 @@
 	</licenses>
 
 	<scm>
-		<tag>marathon-client-0.4.13</tag>
+		<tag>master</tag>
 		<url>git@github.com:cloudbees/marathon-client.git</url>
 		<connection>scm:git:git@github.com:cloudbees/marathon-client.git</connection>
 		<developerConnection>scm:git:git@github.com:cloudbees/marathon-client.git</developerConnection>
