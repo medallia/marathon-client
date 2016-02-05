@@ -16,6 +16,7 @@ import mesosphere.marathon.client.model.v2.GetTasksResponse;
 import mesosphere.marathon.client.model.v2.Group;
 import mesosphere.marathon.client.model.v2.QueueResponse;
 import mesosphere.marathon.client.model.v2.Result;
+import mesosphere.marathon.client.model.v2.UpdateAppResponse;
 import mesosphere.marathon.client.utils.MarathonException;
 
 import feign.Param;
@@ -42,7 +43,7 @@ public interface Marathon {
 	App createApp(App app) throws MarathonException;
 
 	@RequestLine("PUT /v2/apps/{app_id}")
-	void updateApp(@Param("app_id") String appId, App app) throws MarathonException;
+	UpdateAppResponse updateApp(@Param("app_id") String appId, App app) throws MarathonException;
 
 	@RequestLine("POST /v2/apps/{id}/restart?force={force}")
 	void restartApp(@Param("id") String id,@Param("force") boolean force) throws MarathonException;
